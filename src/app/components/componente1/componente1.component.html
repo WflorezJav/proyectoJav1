@@ -1,0 +1,31 @@
+<h1 *ngIf="perro.nombre == 'pepe'">Datos del perro</h1>
+
+<h3>Nombre del perro: {{perro.nombre}}</h3>
+
+<h3>Raza del perro: {{perro.raza}}</h3>
+
+
+<button [disabled]="mostrartitulo">Boton Saludar</button>
+
+
+<div>
+    <ul>
+        <li *ngFor="let fruta of frutas"> {{fruta}}</li>
+    </ul>
+</div>
+
+
+<div>   
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <th>Raza</th>
+        </tr>
+        <tr  *ngFor="let animal of animales">
+            <td>{{animal.nombre}}</td>
+            <td>{{animal.raza}}</td>
+        </tr>
+    </table>
+
+    <button (click)="sayHai()"></button>
+</div>
