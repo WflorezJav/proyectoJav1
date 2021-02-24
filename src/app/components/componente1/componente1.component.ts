@@ -12,6 +12,10 @@ export class Componente1Component implements OnInit{
   public mostrartitulo: boolean = false;
   public frutas = ["pera", "manzana", "banano", "mango"];
   public animales: Perro[] = [];
+  public nombrepersona = "Carlos";
+  public activo = false;
+  public razas = [];
+  public ff = Raza;
 
   constructor() {
     this.perro = new Perro('pepe', Raza.PASTOR);
@@ -19,6 +23,10 @@ export class Componente1Component implements OnInit{
 
 
   ngOnInit(): void {
+      this.nombrepersona = "Juan";
+      this.razas = Object.values(Raza).filter(value => typeof value === 'string');
+      
+
       this.perro = new Perro('pepe', Raza.PASTOR);
       this.animales = 
       [
@@ -29,5 +37,13 @@ export class Componente1Component implements OnInit{
       ];
   }
 
+  public hacerClic()
+  {
+    alert('hola desde nuestro componente 1: ' + this.nombrepersona);    
+  }
+
+  public  mostrarInfoObjeto() {
+    alert(this.perro.nombre  + '  - '  + this.perro.raza );
+  }
 
 }

@@ -26,6 +26,29 @@
             <td>{{animal.raza}}</td>
         </tr>
     </table>
-
-    <button (click)="sayHai()"></button>
 </div>
+
+
+<!-- Enlaces a traves de ngModel  -->
+
+
+<input type="text" [(ngModel)]="nombrepersona" [disabled]="activo">
+<span>{{nombrepersona}}</span>
+<input type="button" (click)="hacerClic()" value="Saludar">
+
+<br>
+<br>
+<br>
+
+<label for="nombre">Nombre</label>
+<input id="nombre" type="text" [(ngModel)]="perro.nombre" [disabled]="activo">
+
+
+<label for="raza">Raza</label>
+
+<select name="raza" id="raza" [(ngModel)]="perro.raza">
+    <option *ngFor="let razaopt of razas; let i = index; " [value]="i">{{razaopt}}</option>
+</select>
+
+<input type="button" (click)="mostrarInfoObjeto()" value="Saludar">
+

@@ -1,0 +1,17 @@
+<p>padre works!</p>
+
+
+<app-hijo #miHijo [value]="perro"  (valorenvio)="recibirEmitir2($event)"></app-hijo>
+
+<app-hijo [value]="perro"  (valorenvio)="recibirEmitir2($event)"></app-hijo>
+
+<input type="button" (click)="SaludarViewChild()" value="Saludar a hijo">
+
+
+<!-- <button #miBoton (click)="onClic(miBoton)">
+    Generar Evento
+</button> -->
+
+
+<br>
+<input type="button" (click)="sumar()" value="Sumar">
