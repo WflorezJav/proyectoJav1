@@ -1,0 +1,19 @@
+<p>admin-animales works!</p>
+
+<table>
+    <tr>
+        <th>NOmbre</th>
+        <th>Raza</th>
+    </tr>
+
+    <tr *ngFor="let perro of  arreglo">    
+        <td>
+            {{perro.nombre}}
+        </td>
+        <td>
+            {{perro.raza}}
+        </td>
+    </tr>
+</table>
+
+<input type="button" value="Cargar Animales" (click)="cargarAnimales()">

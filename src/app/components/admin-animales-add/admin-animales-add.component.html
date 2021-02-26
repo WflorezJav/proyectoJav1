@@ -1,0 +1,12 @@
+<p>admin-animales-add works!</p>
+
+<label for="nombre">Nombre</label>
+<input type="text" id="nombre" name="nombre" [(ngModel)]="perro.nombre"  >
+
+<label for="raza">Raza</label>
+
+<select name="raza" id="raza"  [(ngModel)]="perro.raza">
+    <option *ngFor="let razaopt of razas; let i = index; " [value]="i">{{razaopt}}</option>
+</select>
+
+<input type="button" value="Guardar" (click)="guardarAnimal()">
